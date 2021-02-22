@@ -1,6 +1,7 @@
 package com.sumon.xyz.Spring.Boot.Quick.Start.Course.normalpart;
 
 
+import com.sumon.xyz.Spring.Boot.Quick.Start.Course.model.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,19 +11,6 @@ import java.util.List;
 
 @RestController
 public class TopicsController {
-
-
-   /* //Get Method;
-    @RequestMapping("/topics")
-    @ResponseBody
-    public List<Topics> sayHello()
-    {
-        return Arrays.asList(
-                new Topics("1","Sumon Sarder","Software Engineer"),
-                new Topics("2","Khair","Software Engineer"),
-                new Topics("3","Sujit","Software Engineer")
-        );
-    }*/
 
 
     @Autowired
@@ -36,6 +24,7 @@ public class TopicsController {
     {
         return topicesService.getAllTopics();
     }
+
 
     //Get Topic;
     @RequestMapping("/topics/{id}")
